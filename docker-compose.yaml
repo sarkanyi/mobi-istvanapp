@@ -1,0 +1,13 @@
+version: '3.8'
+networks: # to create a custom bridge
+  istvanbr111: 
+services:
+  istvanpp007:
+    image: istvanciapp:v1 
+    build: . 
+    container_name: istvancic1
+    ports:
+    - "1111:80"
+    restart: always 
+    networks: # use bridge created above 
+    - istvanbr111
