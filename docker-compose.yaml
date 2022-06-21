@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  istvanappfinal:
+    image: istvancustomer:v1 
+    build: . # location of dockerfile 
+    container_name: istvancc0011
+    ports:
+    - "1215:80"
+    restart: always 
+    environment: 
+      deploy: "app3"
